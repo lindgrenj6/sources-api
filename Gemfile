@@ -7,7 +7,9 @@ require File.join(Bundler::Plugin.index.load_paths("bundler-inject")[0], "bundle
 gem 'cloudwatchlogger',     '~> 0.2.1'
 gem 'clowder-common-ruby',  '~> 0.2.2'
 gem 'discard',              '~> 1.2'
-gem 'insights-api-common',  '~> 5.0', '>= 5.0.4'
+gem 'insights-api-common',  git: "https://github.com/lindgrenj6/insights-api-common-rails.git", branch: :rails_6
+# gem 'insights-api-common',  :path => "/home/jlindgren/cloud/git/crc/insights/api-common"
+gem "graphql-preload", git: "https://github.com/Envek/graphql-preload", :branch => "master"
 gem 'jbuilder',             '~> 2.0'
 gem 'json-schema',          '~> 2.8'
 gem 'manageiq-loggers',     '~> 0.4', ">= 0.4.2"
@@ -18,8 +20,8 @@ gem 'pg',                   '~> 1.0', :require => false
 gem 'puma',                 '~> 4.3.8'
 gem 'pundit',               '~> 2.1'
 gem 'rack-cors',            '>= 1.1.1', '~> 1.1'
-gem 'rails',                '~> 5.2.2'
-gem 'sidekiq',              '~> 5.2.2'
+gem 'rails',                '~> 6.0.3.7'
+gem 'sidekiq',              '~> 6.2.1'
 gem 'sprockets',            '~> 4.0'
 
 group :development, :test do

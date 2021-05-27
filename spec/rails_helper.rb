@@ -12,7 +12,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 
 # disable sidekiq logging during tests
 require 'sidekiq/testing'
-Sidekiq::Logging.logger = nil
+Sidekiq.logger.level = Logger::WARN
 
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!

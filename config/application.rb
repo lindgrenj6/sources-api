@@ -27,6 +27,9 @@ module Sources
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
+    config.load_defaults 6.0
+    config.autoloader = :classic
+
     # Disabling eagerload in production in favor of autoload
     config.autoload_paths += config.eager_load_paths
 
